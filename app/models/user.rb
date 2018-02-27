@@ -13,6 +13,11 @@ class User < ApplicationRecord
   foreign_key: :user_id,
   class_name: :Movie
 
+  has_many :ratings,
+  primary_key: :id,
+  foreign_key: :user_id,
+  class_name: :Rating
+
   attr_reader :password
 
 
