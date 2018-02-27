@@ -10,6 +10,8 @@ import {
 
 import Welcome from './welcome';
 import Header from './header/header_container';
+import { LogInContainer, SignUpContainer} from './session/session_container';
+
 const App = () => (
 
   <div className='window'>
@@ -20,7 +22,8 @@ const App = () => (
       <Header/>
     </div>
     <Switch>
-
+      <Route path='/login' component={ LogInContainer }/>
+      <Route path='/signup' component={ SignUpContainer }/>
       <Route path='/' component={ Welcome }/>
 
 
