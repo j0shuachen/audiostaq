@@ -1,4 +1,5 @@
 // webpack.config.js
+// review webpack 2.0 later on
 var path = require("path");
 var webpack = require("webpack");
 
@@ -13,6 +14,7 @@ var prodPlugins = [
   }),
   new webpack.optimize.UglifyJsPlugin({
     compress: {
+      unused: false,
       warnings: true
     }
   })
