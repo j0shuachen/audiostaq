@@ -8,3 +8,4 @@
 
 
 user1 = User.create!(username: 'admin_josh', password: 'theonlyadmin')
+guest = User.create!(username: 'guest_user', password: 'guest_user')

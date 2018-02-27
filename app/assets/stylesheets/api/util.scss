@@ -47,6 +47,9 @@ body, html, #root, .window {
   -webkit-font-feature-settings: "liga","kern";
   font-feature-settings: "liga","kern";
   width: 100%;
+  color: white;
+  letter-spacing: 1px;
+  text-decoration: none;
 
  }
 
@@ -108,7 +111,7 @@ body, html, #root, .window {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: 5px;
+  padding: 0 5px;
 }
 
 .fade{
@@ -151,4 +154,31 @@ body, html, #root, .window {
   font-size: 50px;
   // text-shadow: 2px 3px #cc4949;
   text-shadow: 2px 2px 1px black;
+}
+
+.icon{
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+.b-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#h-row{
+  margin: 0 10px;
+}
+
+.b-button{
+  display: flex;
+  text-decoration: none;
+  color: white;
+}
+
+#h-button{
+  margin: 0 5px;
 }

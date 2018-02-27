@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 
 import Welcome from './welcome';
-
+import Header from './header/header_container';
 const App = () => (
 
   <div className='window'>
@@ -17,6 +17,7 @@ const App = () => (
       <div className='h-left'>
         <Link to='/home' className='header-logo'>NetMix</Link>
       </div>
+      <Header/>
     </div>
     <Switch>
 
@@ -25,8 +26,10 @@ const App = () => (
 
     </Switch>
       <div className='footer'>
-        <div className='f-link'>about</div>
-        <div className='f-link'>contact</div>
+        <div id='h-row' className='b-row'>
+          <div className='f-link'>about</div>
+          <div className='f-link'>contact</div>
+        </div>
       </div>
   </div>
 
