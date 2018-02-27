@@ -1,0 +1,78 @@
+body, html, #root, .window {
+  display: flex;
+  flex-basis: 100%;
+  flex-grow: 1;
+  min-height: 100%;
+  font-size: 16px;
+  line-height: 1.45;
+  font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "liga","kern";
+  -moz-font-feature-settings: "liga=1, kern=1";
+  -ms-font-feature-settings: "liga","kern";
+  -o-font-feature-settings: "liga","kern";
+  -webkit-font-feature-settings: "liga","kern";
+  font-feature-settings: "liga","kern";
+  width: 100%;
+
+ }
+
+.window{
+  flex-direction: column;
+
+}
+
+
+.header, .footer{
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: rgba(204, 73, 73, 1);
+}
+
+.header{
+  border-bottom: 2px white solid;
+  justify-content: space-between;
+}
+
+.header-logo{
+  font-size: x-large;
+  align-self: flex-start;
+  display: flex;
+  // justify-content: center;
+  box-sizing: border-box;
+  padding: 10px;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 8px;
+  // width: 20%;
+  height: 50px;
+}
+
+.footer{
+  border-top: 2px white solid;
+}
+
+.container{
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  // background: rgba(0, 0, 0, 0.4);
+}
+
+.header-button, .greeting-name, .f-link{
+  text-decoration: none;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 5px;
+}
