@@ -1,40 +1,43 @@
-import * as APIUtil from '../util/movie_api_util';
-export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
-export const RECEIVE_MOVIE = 'RECEIVE_MOVIE';
-export const RECEIVE_MOVIES = 'RECEIVE_MOVIES';
-
-
-export const receiveMovie = movie =>({
-  type: RECEIVE_MOVIE,
-  movie
-});
+import * as APIUtil from '../util/rating_api_util';
+export const RECEIVE_RATINGS = "RECEIVE_RATINGS";
+export const RECEIVE_RATING = "RECEIVE_RATING";
+export const UPDATE_RATING = "UPDATE_RATING";
+export const RECEIVE_ERRORS ="RECEIVE_ERRORS";
 
 export const receiveErrors = errors => ({
   type: RECEIVE_ERRORS,
   errors
 });
-
-export const receiveMovies = movies =>({
-  type: RECEIVE_MOVIES,
-  movies
+export const receiveRatings = ratings => ({
+  type: RECEIVE_RATINGS,
+  ratings
 });
 
+export const receiveRating= rating =>({
+  type: RECEIVE_RATING,
+  rating
+});
 
-export const fetchMovie = id => dispatch => (
-  APIUtil.fetchMovie(id).then(movie => (
-    dispatch(receiveMovie(movie))
+export const fetchRatings = filters => dispatch =>(
+  APIUtil.fetchRatings(filters).then(ratings =>(
+    dispatch(receiveRatings(ratings))
   ))
 );
 
-export const fetchMovies = (filters) => dispatch => (
-  APIUtil.fetchMovies(filters).then(movie => (
-    dispatch(receiveMovies(movie))
+export const fetchRating= id => dispatch =>(
+  APIUtil.fetchRating(id).then(rating =>(
+    dispatch(receiveRating(rating))
   ))
 );
 
-
-export const createMovie = movie => dispatch => (
-  APIUtil.createMovie(movie).then(resp => (
-    dispatch(receiveMovie(resp))
+export const createRating= rating => dispatch => (
+  APIUtil.createRating(rating).then(resp => (
+    dispatch(receiveRating(resp))
   ))
 );
+
+export const updateRating= rating => dispatch => {
+  return APIUtil.updateRating(rating).then(resp => {
+    dispatch(receiveRating(resp));
+  }) ;
+};

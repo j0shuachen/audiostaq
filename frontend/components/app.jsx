@@ -11,6 +11,7 @@ import {
 import Welcome from './welcome';
 import Header from './header/header_container';
 import { LogInContainer, SignUpContainer} from './session/session_container';
+import { MovieIndexContainer} from './movie/movie_container';
 
 const App = () => (
 
@@ -22,6 +23,7 @@ const App = () => (
       <Header/>
     </div>
     <Switch>
+      <Route path='/home' component={ MovieIndexContainer }/>
       <Route path='/login' component={ LogInContainer }/>
       <Route path='/signup' component={ SignUpContainer }/>
       <Route path='/' component={ Welcome }/>

@@ -22,7 +22,9 @@ class Api::RatingsController < ApplicationController
   end
 
   def index
-    @ratings = Rating.all
+    # @ratings = Rating.all
+    @ratings = Rating.where('user_id = ?', params[:user_id])
+    @ratings = [] if @ratings.length === 0
     render :index
   end
 

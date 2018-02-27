@@ -19,5 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 import { signup, fetchUsers } from './util/session_api_util';
+import { createMovie, fetchMovies, fetchMovie } from './util/movie_api_util';
+import { createRating, fetchRatings, fetchRating } from './util/rating_api_util';
+
 window.signup = signup;
 window.fetchUsers = fetchUsers;
+window.createMovie = createMovie;
+window.fetchMovies = fetchMovies;
+window.fetchMovie = fetchMovie;
+window.createRating = createRating;
+window.fetchRating = fetchRating;
+window.fetchRatings = fetchRatings;
