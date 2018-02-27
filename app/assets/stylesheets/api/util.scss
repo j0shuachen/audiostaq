@@ -1,3 +1,33 @@
+@keyframes fadein {
+ from { opacity: 0; }
+ to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+ from { opacity: 0; }
+ to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+ from { opacity: 0; }
+ to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+ from { opacity: 0; }
+ to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+ from { opacity: 0; }
+ to   { opacity: 1; }
+}
+
+
 body, html, #root, .window {
   display: flex;
   flex-basis: 100%;
@@ -68,6 +98,10 @@ body, html, #root, .window {
   // background: rgba(0, 0, 0, 0.4);
 }
 
+#welcome{
+  position: relative;
+}
+
 .header-button, .greeting-name, .f-link{
   text-decoration: none;
   color: white;
@@ -75,4 +109,46 @@ body, html, #root, .window {
   align-items: center;
   box-sizing: border-box;
   padding: 5px;
+}
+
+.fade{
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+#w-bi{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  // background: rgba(204, 73, 73, 0.3);
+  object-fit: cover;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  opacity: 0.9;
+  flex-grow: 1;
+}
+
+#w-message{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30%;
+  color: white;
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-size: 50px;
+  // text-shadow: 2px 3px #cc4949;
+  text-shadow: 2px 2px 1px black;
 }

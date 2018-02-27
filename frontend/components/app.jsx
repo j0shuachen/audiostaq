@@ -8,6 +8,8 @@ import {
   HashRouter
 } from 'react-router-dom';
 
+import Welcome from './welcome';
+
 const App = () => (
 
   <div className='window'>
@@ -18,6 +20,7 @@ const App = () => (
     </div>
     <Switch>
 
+      <Route path='/' component={ Welcome }/>
 
 
     </Switch>
