@@ -1,6 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import MovieItem from './movie_item';
+import Search from './search';
 
 import {
   Link
@@ -75,6 +76,8 @@ class MovieIndex extends React.Component{
     return(
       <div className='container'>
         <div className='index-container-layer'>
+          <Search search={this.search}/>
+
           <div className='index-holder'>
             <Modal isOpen={this.state.open}
               onRequestClose={this.closeModal}

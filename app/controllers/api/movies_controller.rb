@@ -23,7 +23,12 @@ class Api::MoviesController < ApplicationController
   end
 
   def index
-    @movies = Movie.all.includes(:user)
+    # @movies = Movie.all.includes(:user)
+    if params[:rating] != '0'
+      @movies = Movie.joins(:ratings).having('AVG(ratings.rating) >=?', params[:rating].to_i).group('movies.id').where('lower(title) LIKE ? and release LIKE ?', "%#{params[:title].downcase}%", "%#{params[:release]}%")
+    else
+      @movies = Movie.where('lower(title) LIKE ? and release LIKE ?', "%#{params[:title].downcase}%", "%#{params[:release]}%")
+    end
   end
 
   private
