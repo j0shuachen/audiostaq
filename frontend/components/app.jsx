@@ -7,7 +7,7 @@ import {
   Link,
   HashRouter
 } from 'react-router-dom';
-
+import { AuthRoute, ProtectedRoute } from '../util/route_api_util';
 import Welcome from './welcome';
 import Header from './header/header_container';
 import { LogInContainer, SignUpContainer} from './session/session_container';
@@ -24,10 +24,10 @@ const App = () => (
       <Header/>
     </div>
     <Switch>
-      <Route path='/upload' component={ UploadContainer }/>
+      <ProtectedRoute path='/upload' component={ UploadContainer }/>
       <Route path='/home' component={ MovieIndexContainer }/>
-      <Route path='/login' component={ LogInContainer }/>
-      <Route path='/signup' component={ SignUpContainer }/>
+      <AuthRoute path='/login' component={ LogInContainer }/>
+      <AuthRoute path='/signup' component={ SignUpContainer }/>
       <Route path='/' component={ Welcome }/>
 
 
