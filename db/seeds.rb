@@ -10,8 +10,8 @@ User.destroy_all
 Movie.destroy_all
 Rating.destroy_all
 
-user1 = User.create!(username: 'admin_josh', password: 'theonlyadmin')
-guest = User.create!(username: 'guest_user', password: 'guest_user')
+user1 = User.create!(username: 'admin_josh', password: 'adminadmin')
+guest1 = User.create!(username: 'guest_user', password: 'guest_user')
 
 
 movie1 = Movie.create!(title: 'django unchained', release: '12252012', user_id: user1.id, poster: 'http://res.cloudinary.com/dxeyfggji/image/upload/v1519432754/75e9c24995ae7f59f192c78230f4133d--classic-movie-posters-classic-movies.jpg', trailer: 'https://www.youtube.com/trailer/eUdM9vrCbow' )

@@ -11,7 +11,7 @@ class Header extends React.Component{
   }
 
   demo(){
-      this.props.login({username: 'guest_user', password: 'guest_user'});
+      this.props.login({user: {username: 'guest_user', password: 'guest_user'}}).then(() => this.props.history.push('/home'));
   }
 
   render(){
@@ -31,6 +31,7 @@ class Header extends React.Component{
     const sessionLinks =() =>{
       return (
         <div id='h-row' className="b-row">
+          <div className='b-button' onClick={this.demo}>demo</div>
           <Link to="/login" id='h-button' className="b-button"> login </Link>
           <Link to="/signup" id='h-button' className="b-button"> signup </Link>
         </div>
@@ -44,4 +45,4 @@ class Header extends React.Component{
       }
     }
 
-export default Header;
+export default withRouter(Header);
