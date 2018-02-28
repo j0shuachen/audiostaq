@@ -21,7 +21,7 @@ class Header extends React.Component{
     const personalGreeting = (currentUser, logout) => (
       <div id='h-row' className="b-row">
         <div className='b-row' to={`/profiles/${currentUser.id}`}>
-          <img id='small' className='icon' src='http://res.cloudinary.com/dxeyfggji/image/upload/v1516396806/avatar-inside-a-circle.svg'/>
+          <img id='small' className='icon' src='https://res.cloudinary.com/dxeyfggji/image/upload/v1516396806/avatar-inside-a-circle.svg'/>
           <div className='greeting-name'>{'Hi, ' + currentUser.username + '!'}</div>
         </div>
         <Link to="/" className="b-button" onClick={logout}> Log Out </Link>
