@@ -27,8 +27,7 @@ class MovieItem extends React.Component{
     if(!this.props.currentUser){
       return(
         <div id='s-bar' className='hidden-bar'>
-
-        <div className='n-user'>sign up to rate!</div>
+          <div className='n-user'>sign up to rate!</div>
         </div>
       );
     }else if (this.props.ratings && !this.state.submitted) {
@@ -39,17 +38,17 @@ class MovieItem extends React.Component{
         <div id='s-bar' className='hidden-bar'>
         <div className='row'>
           {this.state.currRating >= 1 ?
-            <img onClick={() => this.rate(1)} onMouseOver={() => this.updateRating(1)} className='star' key={0} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/fullz.svg'/> :
-            <img onClick={() => this.rate(1)} onMouseOver={() => this.updateRating(1)} className='star' key={0} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620775/emptyz.svg'/> }
+            <img onClick={() => this.rate(1)} onMouseOver={() => this.updateRating(1)} className='star' key={0} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/fullz.svg'/> :
+            <img onClick={() => this.rate(1)} onMouseOver={() => this.updateRating(1)} className='star' key={0} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620775/emptyz.svg'/> }
           {this.state.currRating >= 2 ?
-            <img onClick={() => this.rate(2)} onMouseOver={() => this.updateRating(2)} className='star' key={1} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/fullz.svg'/> :
-            <img onClick={() => this.rate(2)} onMouseOver={() => this.updateRating(2)} className='star' key={1} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620775/emptyz.svg'/> }
+            <img onClick={() => this.rate(2)} onMouseOver={() => this.updateRating(2)} className='star' key={1} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/fullz.svg'/> :
+            <img onClick={() => this.rate(2)} onMouseOver={() => this.updateRating(2)} className='star' key={1} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620775/emptyz.svg'/> }
           {this.state.currRating >= 3 ?
-            <img onClick={() => this.rate(3)} onMouseOver={() => this.updateRating(3)} className='star' key={2} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/fullz.svg'/> :
-            <img onClick={() => this.rate(3)} onMouseOver={() => this.updateRating(3)} className='star' key={2} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620775/emptyz.svg'/> }
+            <img onClick={() => this.rate(3)} onMouseOver={() => this.updateRating(3)} className='star' key={2} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/fullz.svg'/> :
+            <img onClick={() => this.rate(3)} onMouseOver={() => this.updateRating(3)} className='star' key={2} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620775/emptyz.svg'/> }
           {this.state.currRating >= 4 ?
-            <img onClick={() => this.rate(4)} onMouseOver={() => this.updateRating(4)} className='star' key={3} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/fullz.svg'/> :
-            <img onClick={() => this.rate(4)} onMouseOver={() => this.updateRating(4)} className='star' key={3} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620775/emptyz.svg'/> }
+            <img onClick={() => this.rate(4)} onMouseOver={() => this.updateRating(4)} className='star' key={3} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/fullz.svg'/> :
+            <img onClick={() => this.rate(4)} onMouseOver={() => this.updateRating(4)} className='star' key={3} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620775/emptyz.svg'/> }
         </div>
         <div className='y-rating'>submit rating: {parseFloat(this.state.currRating).toFixed(1)}</div>
 
@@ -81,27 +80,27 @@ class MovieItem extends React.Component{
     const r = (4-rating).toFixed(1);
     // console.log(r);
     const ar = [];
-    const empty = <img className='star' src='http://res.cloudinary.com/dxeyfggji/image/upload/v1516259491/starsd.svg'/>;
-    const full = <img className='star' src='http://res.cloudinary.com/dxeyfggji/image/upload/v1516259476/star_3.svg'/>;
-    const half = <img className='star' src='http://res.cloudinary.com/dxeyfggji/image/upload/v1516259474/favorite.svg'/>;
+    const empty = <img className='star' src='https://res.cloudinary.com/dxeyfggji/image/upload/v1516259491/starsd.svg'/>;
+    const full = <img className='star' src='https://res.cloudinary.com/dxeyfggji/image/upload/v1516259476/star_3.svg'/>;
+    const half = <img className='star' src='https://res.cloudinary.com/dxeyfggji/image/upload/v1516259474/favorite.svg'/>;
     for(var i = 0; i < Math.floor(rating); i ++){
       ar.push(
-        <img className='star' key={i} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/fullz.svg'/>
+        <img className='star' key={i} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/fullz.svg'/>
       );
     }
     if(r.slice(-1) !== '0'){
       // console.log(4 - r, r);
       ar.push(
-        <img className='star' key={ar.length + 1} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/halfz.svg'/>
+        <img className='star' key={ar.length + 1} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/halfz.svg'/>
       );
     }
     for(var n = ar.length; n < 4; n++){
       ar.push(
-        <img className='star' key={ar.length + 1} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620775/emptyz.svg'/>
+        <img className='star' key={ar.length + 1} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620775/emptyz.svg'/>
       );
     }
     // for(var i = rating; i < 4; i ++){
-    //   ar.push(<img className='star' key={i} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1516259491/starsd.svg'/>);
+    //   ar.push(<img className='star' key={i} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1516259491/starsd.svg'/>);
     // }
     return(
       ar
@@ -128,10 +127,10 @@ class MovieItem extends React.Component{
         <div id='i-bar' className='hidden-bar'>
           <div className='row'>released: {g.release}</div>
             <div className='row'>
-              <div id='watch' className='icon' onClick={() => this.props.openModal(g.title, g.release, g.trailer)}><img src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519445886/human-eye-shape.svg' className='icon'/></div>
+              <div id='watch' className='icon' onClick={() => this.props.openModal(g.title, g.release, g.trailer)}><img src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519445886/human-eye-shape.svg' className='icon'/></div>
                 {g.trailer.slice(0, 30) === 'https://www.youtube.com/embed/' ?
-              <div id='watch' className='icon' onClick={() => this.props.openModal(g.title, g.release, g.trailer)}><img src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519444507/trailer_1.svg' className='icon'/></div> :
-              <a id='watch' className='icon' target='_blank' href={g.trailer}><img src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519444507/trailer_1.svg' className='icon'/></a>}
+              <div id='watch' className='icon' onClick={() => this.props.openModal(g.title, g.release, g.trailer)}><img src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519444507/trailer_1.svg' className='icon'/></div> :
+              <a id='watch' className='icon' target='_blank' href={g.trailer}><img src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519444507/trailer_1.svg' className='icon'/></a>}
             </div>
           </div>
       </div>

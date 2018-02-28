@@ -38,17 +38,17 @@ class Search extends React.Component{
                 <div id='star-search' className='row'>
                   <div className='star' onMouseOver={() => this.updateRating(0)}></div>
                 {this.state.rating >= 1 ?
-                  <img onMouseOver={() => this.updateRating(1)} className='star' key={0} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/fullz.svg'/> :
-                  <img onMouseOver={() => this.updateRating(1)} className='star' key={0} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620775/emptyz.svg'/> }
+                  <img onMouseOver={() => this.updateRating(1)} className='star' key={0} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/fullz.svg'/> :
+                  <img onMouseOver={() => this.updateRating(1)} className='star' key={0} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620775/emptyz.svg'/> }
                 {this.state.rating >= 2 ?
-                  <img onMouseOver={() => this.updateRating(2)} className='star' key={1} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/fullz.svg'/> :
-                  <img onMouseOver={() => this.updateRating(2)} className='star' key={1} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620775/emptyz.svg'/> }
+                  <img onMouseOver={() => this.updateRating(2)} className='star' key={1} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/fullz.svg'/> :
+                  <img onMouseOver={() => this.updateRating(2)} className='star' key={1} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620775/emptyz.svg'/> }
                 {this.state.rating >= 3 ?
-                  <img onMouseOver={() => this.updateRating(3)} className='star' key={2} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/fullz.svg'/> :
-                  <img onMouseOver={() => this.updateRating(3)} className='star' key={2} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620775/emptyz.svg'/> }
+                  <img onMouseOver={() => this.updateRating(3)} className='star' key={2} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/fullz.svg'/> :
+                  <img onMouseOver={() => this.updateRating(3)} className='star' key={2} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620775/emptyz.svg'/> }
                 {this.state.rating >= 4 ?
-                  <img onMouseOver={() => this.updateRating(4)} className='star' key={3} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/fullz.svg'/> :
-                  <img onMouseOver={() => this.updateRating(4)} className='star' key={3} src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519620775/emptyz.svg'/> }
+                  <img onMouseOver={() => this.updateRating(4)} className='star' key={3} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620774/fullz.svg'/> :
+                  <img onMouseOver={() => this.updateRating(4)} className='star' key={3} src='https://res.cloudinary.com/dxeyfggji/image/upload/v1519620775/emptyz.svg'/> }
                   <div className='star'></div>
                 </div>
               </div>

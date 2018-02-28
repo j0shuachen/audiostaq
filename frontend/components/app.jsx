@@ -34,8 +34,7 @@ const App = () => (
     </Switch>
       <div className='footer'>
         <div id='h-row' className='b-row'>
-          <div className='f-link'>about</div>
-          <div className='f-link'>contact</div>
+
         </div>
       </div>
   </div>
