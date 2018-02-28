@@ -131,7 +131,7 @@ class MovieItem extends React.Component{
               <div id='watch' className='icon' onClick={() => this.props.openModal(g.title, g.release)}><img src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519445886/human-eye-shape.svg' className='icon'/></div>
                 {g.trailer.slice(0, 30) === 'https://www.youtube.com/embed/' ?
               <div id='watch' className='icon' onClick={() => this.props.openModal(g.title, g.release)}><img src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519444507/trailer_1.svg' className='icon'/></div> :
-              <a id='watch' className='icon' target='_blank' href={g.trailer}><img src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519444507/trailer_1.svg' className='s-icon'/></a>}
+              <a id='watch' className='icon' target='_blank' href={g.trailer}><img src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519444507/trailer_1.svg' className='icon'/></a>}
             </div>
           </div>
       </div>

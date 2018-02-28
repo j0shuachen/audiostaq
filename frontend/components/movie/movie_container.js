@@ -2,6 +2,7 @@ import {connect} from 'react-redux';
 import MovieIndex from './movie_index';
 import {fetchMovies, fetchMovie, createMovie} from '../../actions/movie_actions';
 import {createRating, fetchRatings} from '../../actions/rating_actions';
+import UploadMovie from './upload_movie';
 
 const mapStateToProps = (state, {match}) => {
   return {
@@ -26,3 +27,8 @@ export const MovieIndexContainer =  connect(
   mapStateToProps,
   mapDispatchToProps
 )(MovieIndex);
+
+export const UploadContainer =  connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(UploadMovie);

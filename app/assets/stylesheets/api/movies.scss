@@ -135,14 +135,18 @@
 }
 
 
-.syr-input, .search-input{
+.syr-input, .search-input, .yr-input{
   height: 35px;
   box-sizing: border-box;
 }
 
-.syr-input{
+.syr-input, .yr-input{
   width: 70px;
   margin: 0 5px;
+}
+
+.yr-input{
+  height: 25px;
 }
 
 .filter{
@@ -188,4 +192,17 @@
   width: 650px;
   align-self: center;
   margin: 20px 0;
+}
+
+.release{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.release-holder{
+  min-height: 30px;
+  margin-bottom: 15px;
+  background-color: white;
+  width: 80%;
 }

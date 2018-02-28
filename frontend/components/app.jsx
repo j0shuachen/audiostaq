@@ -11,18 +11,20 @@ import {
 import Welcome from './welcome';
 import Header from './header/header_container';
 import { LogInContainer, SignUpContainer} from './session/session_container';
-import { MovieIndexContainer} from './movie/movie_container';
+import { MovieIndexContainer, UploadContainer} from './movie/movie_container';
 
 const App = () => (
 
   <div className='window'>
     <div className='header'>
-      <div className='h-left'>
+      <div className='row'>
         <Link to='/home' className='header-logo'>NetMix</Link>
+        <Link to='/upload' id='h-button' className='b-button'>upload</Link>
       </div>
       <Header/>
     </div>
     <Switch>
+      <Route path='/upload' component={ UploadContainer }/>
       <Route path='/home' component={ MovieIndexContainer }/>
       <Route path='/login' component={ LogInContainer }/>
       <Route path='/signup' component={ SignUpContainer }/>
