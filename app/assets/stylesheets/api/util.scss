@@ -72,21 +72,6 @@ body, html, #root, .window {
   justify-content: space-between;
 }
 
-.header-logo{
-  font-size: x-large;
-  align-self: flex-start;
-  display: flex;
-  // justify-content: center;
-  box-sizing: border-box;
-  padding: 10px;
-  align-items: center;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  letter-spacing: 8px;
-  // width: 20%;
-  height: 50px;
-}
 
 .footer{
   border-top: 2px white solid;
@@ -153,6 +138,7 @@ body, html, #root, .window {
   left: 0;
   right: 0;
   top: 30%;
+  text-align: center;
   color: white;
   font-size: xx-large;
   display: flex;
@@ -438,4 +424,54 @@ iframe{
   letter-spacing: 2px;
   flex-grow: 1;
   color: black;
+}
+
+.header-logo{
+  align-self: flex-start;
+  display: flex;
+  // justify-content: center;
+  box-sizing: border-box;
+  padding: 10px;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  // width: 20%;
+  height: 50px;
+}
+
+@media screen and (max-width: 500px) {
+
+  .header-logo{
+    font-size: medium;
+    letter-spacing: 2px;
+  }
+
+  .greeting-name, .b-button{
+    font-size: small;
+
+  }
+}
+
+@media screen and (min-width: 501px) {
+
+  .header-logo{
+    font-size: large;
+    letter-spacing: 4px;
+  }
+
+  .greeting-name, .b-button{
+    font-size: medium;
+  }
+
+}
+
+
+@media screen and (min-width: 800px) {
+  .header-logo{
+    font-size: x-large;
+    letter-spacing: 8px;
+
+  }
+
 }

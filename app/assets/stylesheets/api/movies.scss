@@ -2,37 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.index-container-layer{
-  display: flex;
-  flex-direction: column;
-  // width: 900px;
-  align-self: center;
-  box-sizing: border-box;
-  padding: 50px;
-  flex-grow: 1;
-  width: 100%;
-}
 
-.index-holder{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  width: 90%;
-  // max-width: 1200px;
-  width: 900px;
-  // max-width: 1000px;
-  align-self: center;
-  margin: 20px 0;
-  justify-content: space-between;
-  // justify-content: space-around;
 
-}
 
-.index-holder:after{
- content: "";
- flex: 0 1 30%;
-}
+
+
 
 .i-movie-poster{
   background: rgba(204, 73, 73, 1);
@@ -142,10 +116,7 @@
   box-sizing: border-box;
 }
 
-.syr-input, .yr-input{
-  width: 70px;
-  margin: 0 5px;
-}
+
 
 .yr-input{
   height: 25px;
@@ -175,26 +146,7 @@
 }
 
 
-#search-row{
-  align-items: center;
-  margin: 10px;
-}
 
-#left-search{
-  width: 60%;
-  margin: 0 10px;
-  min-width: 350px;
-}
-
-#search-holder{
-  border: 1px rgba(204, 73, 73, 0.6) solid;
-  box-sizing: border-box;
-  padding: 10px;
-  min-width: 650px;
-  width: 650px;
-  align-self: center;
-  margin: 20px 0;
-}
 
 .release{
   display: flex;
@@ -217,4 +169,164 @@
   box-sizing: border-box;
   padding: 2px 5px;
   color: white;
+}
+
+.index-container-layer{
+  display: flex;
+  flex-direction: column;
+  // width: 900px;
+  align-self: center;
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100%;
+}
+
+#search-holder{
+  border: 1px rgba(204, 73, 73, 0.6) solid;
+  box-sizing: border-box;
+  padding: 10px;
+  align-self: center;
+  margin: 20px 0;
+  max-width: 650px;
+}
+
+.index-holder{
+  width: 90%;
+  margin: 20px 0;
+  width: 900px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  // max-width: 1200px;
+  // max-width: 1000px;
+  align-self: center;
+  // justify-content: space-around;
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+  .index-container-layer{
+    padding: 10px;
+
+  }
+
+
+
+
+}
+
+@media screen and (max-width: 799px) {
+
+  #rp-align{
+    margin: 20px;
+  }
+
+
+  .index-container-layer{
+    padding: 30px;
+  }
+
+  .index-holder{
+    justify-content: center;
+    width: 100%;
+  }
+
+  #left-search, #right-search{
+    width: 90%;
+    margin: 5px 10px;
+
+    // min-width: 350px;
+  }
+
+  #search-holder{
+    width: 100%;
+    width: 60%;
+    min-width: 340px;
+  }
+
+  #search-row{
+    flex-direction: column;
+    // margin: 10px;
+  }
+
+  .syr-input, .yr-input{
+    width: 50px;
+    margin: 0 5px;
+  }
+
+
+}
+
+@media screen and (max-width: 700px){
+
+
+  .index-holder{
+    width: 100%;
+    margin: 20px 0;
+    // width: 900px;
+    justify-content: center;
+  }
+
+  .index-holder:after{
+   content: "";
+   flex: 0 1 40%;
+  }
+}
+
+
+
+
+@media screen and (min-width: 800px) {
+
+  .index-container-layer{
+    padding: 30px;
+
+  }
+
+  #search-holder{
+    min-width: 650px;
+    width: 650px;
+  }
+
+  #search-row{
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+
+  }
+
+  #left-search{
+    width: 60%;
+    margin: 0 10px;
+    min-width: 350px;
+  }
+
+  .syr-input, .yr-input{
+    width: 70px;
+    margin: 0 5px;
+  }
+
+  .index-holder{
+    width: 90%;
+    margin: 20px 0;
+    max-width: 900px;
+    // width: 900px;
+    justify-content: space-between;
+
+  }
+
+  .syr-input, .yr-input{
+    width: 70px;
+    margin: 0 5px;
+  }
+
+  .index-holder:after{
+   content: "";
+   flex: 0 1 30%;
+  }
+
+
 }
