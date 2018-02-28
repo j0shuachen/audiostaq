@@ -16,10 +16,10 @@ const RatingReducer = (state = initialState, action) => {
 
   switch(action.type){
     case RECEIVE_RATINGS:
-    console.log(action);
+    // console.log(action);
       return action.ratings;
     case RECEIVE_RATING:
-    console.log(action);
+    // console.log(action);
     // console.log(action.rating);
     return action.rating;
       // const newRating= {[action.rating.id]: action.rating};

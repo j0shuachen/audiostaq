@@ -69,7 +69,7 @@ class MovieItem extends React.Component{
     }
     }else if (this.state.submitted) {
       return(
-      <div id='s-bar' className='bar'>
+      <div id='s-bar' className='hidden-bar'>
         <div className='y-rating'>thanks for rating!</div>
       </div>
     );

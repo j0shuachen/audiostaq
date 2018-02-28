@@ -16,16 +16,16 @@ const MovieReducer = (state = initialState, action) => {
 
   switch(action.type){
     case RECEIVE_MOVIES:
-    console.log(action);
+    // console.log(action);
       return action.movies;
     case RECEIVE_MOVIE:
-    console.log(action.movie);
+    // console.log(action.movie);
     return action.movie;
       // const newMovie= {[action.movie.id]: action.movie};
       // return newMovie;
     case RECEIVE_ERRORS:
       const errors = action.errors;
-      console.log(action);
+      // console.log(action);
 
       return merge({}, state, {
         errors

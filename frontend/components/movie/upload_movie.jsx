@@ -44,7 +44,7 @@ class UploadMovie extends React.Component{
 
 
   render(){
-    console.log(this.props);
+    // console.log(this.props);
     const er = this.state.errors;
     return(
       <div id='login-c' className="container">

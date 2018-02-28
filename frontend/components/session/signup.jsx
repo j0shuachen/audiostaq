@@ -36,7 +36,7 @@ class SignUpForm extends React.Component {
 
 
   render(){
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <div id='signup-c' className="container">
         <img id='s-bi' className='fade' src='http://res.cloudinary.com/dxeyfggji/image/upload/v1519431115/Cx7osdeRz.jpg'/>

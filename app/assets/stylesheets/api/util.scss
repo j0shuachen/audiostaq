@@ -423,3 +423,15 @@ iframe{
   width: 80%;
   height: 80%;
 }
+
+
+.loading{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  letter-spacing: 2px;
+  flex-grow: 1;
+  color: black;
+}

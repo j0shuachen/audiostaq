@@ -37,13 +37,13 @@ class MovieIndex extends React.Component{
 
 
   openModal(m, r, t) {
-    console.log('haha')
+    // console.log('haha')
     this.setState({open: true, modal_movie_name: m, modal_release_date: r, modal_trailer: t });
   }
 
   closeModal() {
     this.setState({open: false});
-    console.log('haha', this.state)
+    // console.log('haha', this.state)
 
   }
 
