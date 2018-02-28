@@ -72,7 +72,7 @@ class Search extends React.Component{
                 className="syr-input"
                 placeholder='xxxx'/>
             </div>
-          <div className='s-button' onClick={() => this.props.search(this.state.search, this.state.rating, this.state.month+this.state.day+this.state.year)}>search</div>
+          <div className='s-button' onClick={() => this.props.search(this.state.search, this.state.rating, this.state.month,this.state.day,this.state.year)}>search</div>
         </div>
       </div>
     );

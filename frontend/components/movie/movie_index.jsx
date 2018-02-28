@@ -16,6 +16,7 @@ class MovieIndex extends React.Component{
       open: false,
       modal_movie_name: '',
       modal_release_date: '',
+      modal_trailer: '',
       rating: 0,
       title: '',
       release: ''
@@ -29,15 +30,15 @@ class MovieIndex extends React.Component{
   }
 
 
-  search(title, rating, release){
-    this.props.fetchMovies({title: title, rating: rating, release: release});
+  search(title, rating, month, day, year){
+    this.props.fetchMovies({title: title, rating: rating, month: month, day: day, year: year});
   }
 
 
 
-  openModal(m, r) {
+  openModal(m, r, t) {
     console.log('haha')
-    this.setState({open: true, modal_movie_name: m, modal_release_date: r });
+    this.setState({open: true, modal_movie_name: m, modal_release_date: r, modal_trailer: t });
   }
 
   closeModal() {
@@ -89,9 +90,9 @@ class MovieIndex extends React.Component{
                 beforeClose: 'myClass_before-close'
                 }}>
                 <div className='frame'>
-                  <div className='m-movie-name'>{this.state.movie_name}</div>
-                  <div className='m-release-date'>{this.state.release_date}</div>
-                  <iframe width="420" height="315" src="https://www.youtube.com/embed/R-P6p86px6U" frameBorder="0" allowFullScreen ></iframe>
+                  <div className='m-movie-name'>{this.state.modal_movie_name}</div>
+                  <div className='m-release-date'>{this.state.modal_release_date}</div>
+                  <iframe width="420" height="315" src={this.state.modal_trailer} frameBorder="0" allowFullScreen ></iframe>
                 </div>
             </Modal>
             {this.props.movies.movies ? this.showMovies(this.props.movies.movies) : null}

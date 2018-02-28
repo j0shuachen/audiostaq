@@ -24,10 +24,12 @@ class Api::MoviesController < ApplicationController
 
   def index
     # @movies = Movie.all.includes(:user)
-    if params[:rating] != '0'
-      @movies = Movie.joins(:ratings).having('AVG(ratings.rating) >=?', params[:rating].to_i).group('movies.id').where('lower(title) LIKE ? and release LIKE ?', "%#{params[:title].downcase}%", "%#{params[:release]}%")
+    if params[:rating] != '0' && params[:rating] != ''
+      # @movies = Movie.joins(:ratings).having('AVG(ratings.rating) >=?', params[:rating].to_i).group('movies.id').where('lower(title) LIKE ? and release LIKE ?', "%#{params[:title].downcase}%", "%#{params[:release]}%")
+      @movies = Movie.joins(:ratings).having('AVG(ratings.rating) >=?', params[:rating].to_i).group('movies.id').where('lower(title) LIKE ? and release LIKE ?', "%#{params[:title].downcase}%", "#{params[:month]}%#{params[:day]}%#{params[:year]}")
+
     else
-      @movies = Movie.where('lower(title) LIKE ? and release LIKE ?', "%#{params[:title].downcase}%", "%#{params[:release]}%")
+      @movies = Movie.where('lower(title) LIKE ? and release LIKE ?', "%#{params[:title].downcase}%", "#{params[:month]}%#{params[:day]}%#{params[:year]}")
     end
   end
 

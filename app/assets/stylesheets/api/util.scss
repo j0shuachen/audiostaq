@@ -360,3 +360,66 @@ input::placeholder{
   font-size: small;
   color: #aab5e8;
 }
+
+
+.bmod{
+  display: flex;
+  width: 80%;
+  align-self: center;
+  height: 80%;
+  background: white;
+  background: black;
+  position: absolute;
+   top: 50%;  /* position the top  edge of the element at the middle of the parent */
+   left: 50%; /* position the left edge of the element at the middle of the parent */
+
+   transform: translate(-50%, -50%);
+   position: absolute;
+   // background: gray;
+   flex-direction: column;
+   box-sizing: border-box;
+   padding: 20px;
+
+   z-index: 1000;
+}
+
+iframe{
+  border: 2px white solid;
+
+}
+
+.m-movie-name, .m-release-date, .n-user{
+  display: flex;
+  color: white;
+  font-size: medium;
+  margin: 10px 0;
+}
+
+.n-user{
+  margin: 0;
+  padding: 0 2px;
+}
+
+
+.m-movie-name{
+  font-size: x-large;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.m-release-date{
+  margin-bottom: 20px;
+
+}
+
+.frame{
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  align-self: center;
+  width: 80%;
+  height: 80%;
+}
